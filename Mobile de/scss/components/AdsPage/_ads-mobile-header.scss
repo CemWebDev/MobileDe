@@ -1,0 +1,32 @@
+@import "../../colors/colors";
+
+.ads__page__mobile__header {
+  display: none ;
+  margin-top: 2px;
+  box-shadow: 0 4px 10px rgba($color: #000, $alpha: 1);
+  background-color: $header-bg-color;
+  padding: .5rem;
+  &__wrapper {
+    .primary-button {
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 31.25rem) {
+  .ads__page__mobile__header {
+    display: block;
+  }
+}

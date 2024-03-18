@@ -1,0 +1,47 @@
+@import "../../colors/colors";
+
+.ads__page__footer {
+  margin: 2rem 0;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    &__row {
+      &:first-child {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $header-bg-color;
+        padding: 1.25rem;
+        font-size: 14px;
+        p {
+          color: #aaa;
+        }
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+    &__policy {
+      &__list {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+      &__link {
+        color: #aaa;
+        font-size: 13px;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    &__form {
+      form {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+}

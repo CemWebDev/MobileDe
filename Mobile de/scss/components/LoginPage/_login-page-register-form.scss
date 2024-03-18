@@ -1,0 +1,42 @@
+@import "../../utils/mixins";
+
+.form__section__user__register__form {
+  &__wrapper {
+    @include flexbox(null, null, column, 2rem);
+    .register-form {
+      @include flexbox(null, null, column, 1rem);
+      > div:not(.conditions) {
+        @include flexbox(null, null, column, null);
+      }
+      .conditions {
+        max-width: 300px;
+        @include flexbox(center, null, null, 1rem);
+        flex-wrap: wrap;
+        > div {
+          @include flexbox(center, null, null, 0.5rem);
+          .circle {
+            @include flexbox(center, center, null, null);
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            > svg {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__buttons {
+    form {
+      @include flexbox(null, null, column, 1rem);
+      .bg-transparent-button {
+        @include flexbox(center, center, null, .5rem);
+        svg {
+          @include flexbox(center, center, null, null);
+        }
+      }
+    }
+  }
+}

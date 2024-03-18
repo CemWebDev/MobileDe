@@ -1,0 +1,17 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+.quality {
+  @include flexbox(null, null, column, 1.25rem);
+  &__header {
+    h4 {
+      color: $white;
+    }
+  }
+  form {
+    @include flexbox(center, null, null, .5rem);
+    label {
+      color: $white;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+
+.ads__utils {
+  margin-top: 5rem;
+  &__wrapper {
+    @include flexbox(flex-end, end, null, 1rem);
+    font-size: 13px;
+    > div {
+      color: #dddd;
+      &:hover {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+    .share {
+      position: relative;
+      cursor: pointer;
+    }
+    .utils__wrapper {
+        @include flexbox(center, null, null, 6px);
+    }
+  }
+  .filter-page-link {
+    color: #dddd;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+@media only screen and (max-width: 31.25rem) {
+  .ads__utils {
+    display: none;
+  }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile de Login Page</title>
+    <link rel="stylesheet" href="./dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <!-- ! Logo section Starts -->
+          <div class="logo">
+            <div class="logo__link">
+              <a href="./index.html" class="logo__link__item">MOBILE DE</a>
+            </div>
+            <div class="logo__text">
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+          </div>
+          <!-- ! Logo section ends -->
+          <!-- ! Header utils section ends -->
+        </div>
+      </div>
+    </header>
+    <section class="form__section">
+      <div class="container">
+        <div class="form__section__container">
+          <div class="form__section__user">
+            <!-- ! Login and sign up buttons -header- starts -->
+            <div class="form__section__user__header">
+              <button
+                class="form-header-button active-header-button"
+                id="header-login-button"
+              >
+                Einloggen
+              </button>
+              <button
+                class="form-header-button"
+                id="header-registration-button"
+              >
+                Registrieren
+              </button>
+            </div>
+            <!-- ! Login and sign up buttons -header- ends -->
+            <!-- ! Text header starts -->
+            <div class="form__section__user__text__header">
+              <h2>Hallo! Willkommen zurück!</h2>
+            </div>
+            <!-- ! Text header ends -->
+
+            <!-- ! Text content starts -->
+            <div class="form__section__user__text__content">
+              <strong>Mit dem mobile.de Konto schneller ans Ziel.</strong>
+              <p>
+                Wir senden Dir regelmäßig E-Mails mit Angeboten zu unseren
+                Dienstleistungen. Du kannst dieser Nutzung zu Werbezwecken
+                jederzeit kostenlos widersprechen, bspw.
+              </p>
+              <a href="" class="confirmation-link">
+                <div>direkt hier.</div>
+                <div>
+                  <i class="bi bi-chevron-down"></i>
+                </div>
+              </a>
+
+              <!-- Info box for email notification -->
+              <div class="confirmation">
+                <form>
+                  <input type="checkbox" name="" id="" />
+                </form>
+                <div>Ich möchte keine E-Mail-Angebote erhalten.</div>
+              </div>
+              <!-- Info bpx for email notification -->
+            </div>
+            <!-- ! Text content ends -->
+            <!-- ! Register form component starts -->
+            <!-- Display none -->
+            <div
+              class="form__section__user__register__form"
+              style="display: none"
+            >
+              <div class="form__section__user__register__form__wrapper">
+                <form class="register-form">
+                  <div>
+                    <label> E-Mail-Adresse </label>
+                    <input type="email" />
+                  </div>
+                  <div>
+                    <label> Passwort </label>
+                    <input type="password" class="register-password-input" />
+                  </div>
+                  <div class="conditions">
+                    <div>
+                      <div class="circle" id="first-circle">
+                        <svg
+                          id="first-check"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                          />
+                        </svg>
+                      </div>
+                      <div>Min. 8 Zeichen</div>
+                    </div>
+                    <div>
+                      <div class="circle" id="second-circle">
+                        <svg
+                          id="second-check"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                          />
+                        </svg>
+                      </div>
+                      <div>Buchstaben</div>
+                    </div>
+                    <div>
+                      <div class="circle" id="third-circle">
+                        <svg
+                          id="third-check"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                          />
+                        </svg>
+                      </div>
+                      <div>Sonderzeichen oder Zahlen</div>
+                    </div>
+                  </div>
+                </form>
+                <div class="form__section__user__register__form__buttons">
+                  <form>
+                    <button class="primary-button orange">Registrieren</button>
+                    <button class="bg-transparent-button" id="back-button">
+                      <div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-left"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+                          />
+                        </svg>
+                      </div>
+                      <div>Zurück</div>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- ! Register form component ends -->
+            <!-- ! Media buttons starts -->
+            <div class="form__section__user__media__buttons">
+              <button class="google-button">
+                <!-- * Icon -->
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-google"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"
+                    />
+                  </svg>
+                </div>
+                <!-- * Icon -->
+                <div>Mit Google einloggen</div>
+              </button>
+              <button class="apple-button">
+                <!-- * Icon -->
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-apple"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"
+                    />
+                    <path
+                      d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"
+                    />
+                  </svg>
+                </div>
+                <!-- * Icon -->
+                <div>Mit apple Einloggen</div>
+              </button>
+            </div>
+            <!-- ! Media buttons ends -->
+            <!-- ! Separator -->
+            <div class="separator"></div>
+            <!-- ! Separator -->
+            <!-- ! Forms starts -->
+            <div class="form__section__user__inputs">
+              <form>
+                <div class="input-wrapper">
+                  <label> E-Mail-Adresse </label>
+                  <input
+                    type="email"
+                    name="e-mail"
+                    id="email-input"
+                    class="login-input"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label> Passwort </label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password-input"
+                    class="login-input"
+                  />
+                </div>
+                <div>
+                  <a href="ForgotPassword.html" class="forgot-password"
+                    >Passwort vergessen?</a
+                  >
+                </div>
+                <div>
+                  <button class="primary-button orange login-button">
+                    Einloggen
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- ! Forms ends -->
+            <!-- ! E-mail button for sign up page -->
+            <div class="form__section__user__signup" style="display: none">
+              <form>
+                <button
+                  type="button"
+                  class="primary-button orange sign-up-email-button"
+                >
+                  <!-- * Envelope svg icon -->
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-envelope-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"
+                      />
+                    </svg>
+                  </div>
+                  <!-- * Envelope svg icon -->
+                  <div>Mit E-Mail registrieren</div>
+                </button>
+              </form>
+            </div>
+            <!-- ! E-mail button for sign up page -->
+          </div>
+          <!-- ! Form section info component starts -->
+          <div class="form__section__info">
+            <div class="form__section__info__header">
+              <h2>Deine Vorteile mit einem mobile.de Konto</h2>
+            </div>
+            <div class="form__section__info__list">
+              <ul class="form__section__info__list__wrapper">
+                <li class="form__section__info__list__item">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                      />
+                    </svg>
+                  </div>
+                  <div>Geparkte Fahrzeuge überall verfügbar</div>
+                </li>
+                <li class="form__section__info__list__item">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                      />
+                    </svg>
+                  </div>
+                  <div>Geparkte Fahrzeuge überall verfügbar</div>
+                </li>
+                <li class="form__section__info__list__item">
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-check"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"
+                      />
+                    </svg>
+                  </div>
+                  <div>Geparkte Fahrzeuge überall verfügbar</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- ! Form section info component ends -->
+        </div>
+      </div>
+    </section>
+    <footer class="login__page__footer">
+      <div class="container">
+        <div class="login__page__footer__wrapper">
+          <div class="login__page__footer__links">
+            <a href="#">Impressum</a><a href="#">Careers(English)</a
+            ><a href="#">AGB</a><a href="#">Datenschutzerklärung</a
+            ><a href="#">Datenschutz</a><a href="#"> Kontakt</a>
+          </div>
+          <div class="login__page__footer__separator"></div>
+          <div class="login__page__footer__form">
+            <select name="" id="">
+              <option value="">Deutsch</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ! Javascript -->
+    <script src="./javascript/login/EmailConfirmation.js" defer></script>
+    <script src="./javascript/login/FormTabs.js" defer></script>
+    <script src="/javascript/login/PasswordListener.js" defer></script>
+    <script src="./javascript/login/Register.js" defer></script>
+    <!-- ! Javascript -->
+  </body>
+</html>

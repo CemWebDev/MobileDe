@@ -1,0 +1,23 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+
+.filter__utils {
+  margin-top: 5rem;
+  width: 100%;
+  &__wrapper {
+    @include flexbox(center, end, null, 1rem);
+    font-size: 14px;
+    color: #fff !important;
+    .open-modal {
+      cursor: pointer;
+      @include flexbox(center, null, null, 0.25rem);
+      svg {
+        @include flexbox(center, center, null, null);
+        color: $white;
+      }
+    }
+    .primary-button {
+      @include flexbox(center, null, null, 0.25rem);
+    }
+  }
+}

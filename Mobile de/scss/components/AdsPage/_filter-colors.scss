@@ -1,0 +1,55 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+
+.hero__left__filter__colors {
+  @include flexbox(flex-start, null, column, 1.5rem);
+  .color-box-wrapper {
+    @include flexbox(flex-start, null, null, 0.5rem);
+    flex-wrap: wrap;
+    .color-box {
+      $colorNames: (
+        "dark-gray": #333,
+        "light-brown": #dbb67f,
+        "gray": #ababab,
+        "dark-brown": #855e1b,
+        "white": #fff,
+        "orange": #ff7f23,
+        "blue": #376edb,
+        "yellow": #f5d300,
+        "red": #ff4040,
+        "green": #7eba30,
+        "purple": #9361ff,
+      );
+
+      @each $name, $color in $colorNames {
+        &.color-box-#{$name} {
+          background-color: $color;
+        }
+      }
+
+      height: 45px;
+      width: 45px;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      @include flexbox(center, center, null, null);
+      img {
+        opacity: 0;
+      }
+      &:hover {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .color-input {
+    @include flexbox(center, null, null, .5rem);
+    label {
+      font-size: 13px;
+      color: $white;
+      span {
+        color: #aaa !important;
+      }
+    }
+  }
+}

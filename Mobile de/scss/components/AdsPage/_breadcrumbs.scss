@@ -1,0 +1,27 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+
+.breadcrumbs {
+  margin-top: 20px;
+  &__wrapper {
+    font-size: 12px;
+    width: 100%;
+    @include flexbox(center, null, null, 0.75rem);
+    p {
+        color: #999;
+    }
+  }
+  &__link {
+    color: #999;
+    &:hover {
+        color: #ddd;
+        text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 31.25rem) {
+  .breadcrumbs {
+    display: none ;
+  }
+}

@@ -1,0 +1,81 @@
+@import "../utils/variables";
+@import "../colors/colors";
+*,
+*::before,
+*::after {
+  margin: $reset;
+  padding: $reset;
+  box-sizing: border-box;
+  transition: 0.3s ease all;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $body-bg-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border-radius: $b-radius;
+  border: $reset;
+  outline: $reset;
+  background: $reset;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 8px rgba($color: #ffffff, $alpha: 0.8);
+  }
+}
+
+select {
+  border: $reset;
+  outline: $reset;
+  cursor: pointer;
+  padding: .25rem 0;
+  color: $white;
+  background-color: $select-bg-color;
+  border: 1px solid #ccc;
+  border-radius: $b-radius;
+}
+
+input {
+  border: $reset;
+  outline: $reset;
+  background: transparent;
+  padding: 0.6rem .5rem;
+  border: 1px solid rgba(221, 221, 221, 0.8666666667);
+  color: $white;
+  &:not([type="checkbox"]):hover {
+    box-shadow: 8px 4px 10px rgba(221, 221, 221, 0.8666666667);
+  }
+  &:not([type="checkbox"]):focus {
+    box-shadow: 0 8px 14px $secondary-blue;
+  }
+}
+
+img {
+  display: flex;
+}
+
+//! Scrollbar component
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: $white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  transition: 0.3s ease;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($color: $primary-color, $alpha: 0.7);
+}

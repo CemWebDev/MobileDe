@@ -1,0 +1,23 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+.login__page__footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  &__links {
+    @include flexbox(center, null, null, 1.5rem);
+    flex-wrap: wrap;
+    a {
+      font-size: 13px;
+      color: #cbcbcb;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    margin: 1rem 0;
+  }
+}

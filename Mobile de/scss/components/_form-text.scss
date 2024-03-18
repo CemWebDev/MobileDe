@@ -1,0 +1,21 @@
+/* @import "../utils/mixins";
+@import "../colors/colors";
+
+.form__text {
+  &__header {
+    h1 {
+      color: $white;
+    }
+  }
+  &__list {
+    @include flexbox(null, null, column, .75rem);
+    &__item {
+      @include flexbox(center, null, null, .375rem);
+        color: $white;
+    }
+    i {
+        color: #42b883;
+    }
+  }
+}
+ */

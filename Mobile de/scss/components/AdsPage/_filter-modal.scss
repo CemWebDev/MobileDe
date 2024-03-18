@@ -1,0 +1,155 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+
+.filter__modal {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flexbox(center, center, null, null);
+  z-index: 999;
+  &::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+  &__wrapper {
+    border-radius: 8px;
+    position: fixed;
+    padding: 2rem;
+    @include flexbox(flex-start, null, column, 1rem);
+    z-index: 5;
+    max-width: 650px;
+    width: 100%;
+    background-color: $header-bg-color;
+    font-size: 14px;
+  }
+  &__header {
+    h3 {
+      color: $white;
+    }
+  }
+  &__information {
+    background-color: $body-bg-color;
+    color: #bbb;
+    @include flexbox(center, space-between, column, 0.5rem);
+    border-radius: 4px;
+    padding: 1rem;
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12.5px;
+    }
+  }
+  &__buttons {
+    width: 100%;
+    @include flexbox(center, space-between, null, null);
+    .filter-search-button {
+      @include flexbox(center, null, null, .25rem);
+      svg {
+        @include flexbox(center, center, null, null);
+      }
+    }
+  }
+  .close-filter-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 1rem;
+    right: 1rem;
+    color: $white;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__content {
+    width: 100%;
+  }
+  .first-modal-form {
+    @include flexbox(null, null, column, 1rem);
+    .promotion {
+      @include flexbox(center, null, null, .5rem);
+      input[type="checkbox"] {
+        @include flexbox(center, center, null, null);
+      }
+      > div {
+        font-size: 13px;
+        color: $white;
+      }
+    }
+    &__columns {
+      @include flexbox(center, space-between, null, null);
+    }
+    &__col {
+      @include flexbox(null, null, column, .5rem);
+      > div:first-child {
+        color: $white;
+      }
+      &:nth-child(2) {
+        > div:last-child {
+          position: relative;
+          input {
+            padding-left: 2rem !important;
+          }
+          svg {
+            position: absolute;
+            left: 4px;
+            top: 8px;
+            color: #aaa;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .second-modal-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    div {
+      @include flexbox(center, null, null, .25rem);
+      color: $white;
+    }
+  }
+  .third-modal-form {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    > div:last-child {
+      @include flexbox(center, null, null, 1rem);
+      > div {
+        @include flexbox(center, null, null, .5rem);
+        span {
+          color: $white;
+        }
+      }
+    }
+  }
+  .fourth-modal-form {
+    padding: 1rem;
+    max-width: 600px;
+    width: 100%;
+    @include flexbox(null, space-between, null, 1rem);
+    .vehicle-item__wrapper {
+      @include flexbox(flex-start, null, column, .75rem);
+    }
+    .vehicle-item {
+      @include flexbox(center, null, null, .5rem);
+      color: $white;
+      .vehicle-item-content {
+        font-size: 13px;
+        @include flexbox(center, null, null, .5rem);
+        svg {
+          @include flexbox(center, center, null, null);
+        }
+      }
+    }
+  }
+}

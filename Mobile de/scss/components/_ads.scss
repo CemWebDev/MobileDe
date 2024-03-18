@@ -1,0 +1,58 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+
+.ads {
+  margin: 30px 0;
+  font-size: 13px;
+  color: $white;
+  .separate-div {
+    @include flexbox(null, null, column, .75rem);
+    margin-top: 1.5rem;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+  &__wrapper {
+    background-color: $header-bg-color;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    @include flexbox(center, null, column, 2rem);
+  }
+  &__header {
+    border-bottom: 1px solid #cbcbcb;
+    margin-bottom: 0.5rem;
+    h2 {
+      margin: 0.25rem 0;
+      font-size: 1.25rem;
+      color: $white;
+    }
+  }
+  &__content {
+    @include flexbox(center, null, null, 1rem);
+  }
+  &__left,
+  &__right {
+    @include flexbox(center, space-between, column, 1rem);
+  }
+  &__footer {
+    text-align: center;
+    @include flexbox(null, center, column, 1rem);
+    > div:nth-child(2) {
+      @include flexbox(null, null, column, 0.375rem);
+    }
+  }
+}
+
+@media only screen and (max-width: 62.5rem) {
+  .ads {
+    &__content {
+      @include flexbox(null, null, column, null);
+    }
+    &__right {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}

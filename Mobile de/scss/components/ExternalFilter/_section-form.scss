@@ -1,0 +1,14 @@
+@import "../../colors/colors";
+
+.filter__page__form {
+  margin: 2 rem 0;
+  &__wrapper {
+    background-color: $header-bg-color;
+    padding: 2rem 1.5rem;
+  }
+  &__header {
+    h4 {
+      color: $white;
+    }
+  }
+}

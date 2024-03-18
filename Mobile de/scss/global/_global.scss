@@ -1,0 +1,88 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+@import "../utils/variables";
+
+.container {
+  max-width: 62.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include responsive-container(1000px, 820px);
+@include responsive-container(840px, 700px);
+
+/* Use extend for buttons */
+.bg-transparent-button {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border: 1px solid $secondary-blue;
+  color: $secondary-blue;
+}
+.large {
+  padding: 0.75rem !important;
+}
+.primary-button {
+  color: $white;
+  padding: 0.75rem;
+}
+.orange {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+}
+.blue {
+  background-color: $button-blue;
+  border: 1px solid $button-blue;
+}
+
+.icon-button {
+  box-shadow: none !important;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background-color: $white;
+  margin: 1.25rem 0;
+}
+
+.chapter-header {
+  margin: 0.75rem 0;
+  border-bottom: 1px solid $white;
+}
+
+.active-header-button {
+  color: $primary-color !important;
+  border-bottom-color: $primary-color !important;
+}
+
+.select-input-wrapper {
+  position: relative;
+  width: 10rem;
+  select {
+    width: 100%;
+    font-size: 12px;
+  }
+  .icon-button {
+    position: absolute;
+    border-radius: 0;
+    border-top-right-radius: $b-radius;
+    border-bottom-right-radius: $b-radius;
+    border: 1px solid #ccc;
+    right: 0;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background-color: $select-bg-color;
+    padding: 0 0.5rem;
+    @include flexbox(center, center, null, null);
+    i {
+      color: $white;
+      font-size: 8px;
+    }
+  }
+}
+
+label {
+  font-size: 14px;
+  color: $white;
+}

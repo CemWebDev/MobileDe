@@ -1,0 +1,27 @@
+@import "../../utils/mixins";
+
+.form__section {
+  &__info {
+    @include flexbox(null, null, column, 1.25rem);
+    &__header {
+      h2 {
+        color: #fff;
+      }
+    }
+    &__list {
+      &__wrapper {
+        @include flexbox(flex-start, null, column, .5rem);
+      }
+      &__item {
+        @include flexbox(center, null, null, 4px);
+        > div:first-child {
+          @include flexbox(center, center, null, null);
+          color: #42b883;
+        }
+        > div:last-child {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

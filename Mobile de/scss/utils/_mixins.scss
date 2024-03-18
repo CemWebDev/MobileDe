@@ -1,0 +1,45 @@
+@mixin responsive-container($breakpoint, $max-width) {
+  @media only screen and (max-width: $breakpoint) {
+    .container {
+      max-width: $max-width;
+    }
+  }
+}
+
+@mixin flexbox($align-items, $justify-content, $flex-direction, $gap) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $flex-direction;
+  gap: $gap;
+}
+
+@mixin adsResponsive() {
+  .ads__container {
+    .ads {
+      &__image {
+        img {
+          max-width: 150px;
+        }
+      }
+      &__info__header {
+        font-size: 12px;
+      }
+      &__bottom {
+        .owner {
+          &__image {
+            img {
+              max-width: 80px;
+            }
+          }
+        }
+        &__buttons {
+          button {
+            padding: .5rem !important;
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+
+.blog {
+  margin-top: 30px;
+
+  //! Remove later
+  margin-bottom: 30px;
+  //!
+  font-size: 12px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  &__box {
+    background-color: $header-bg-color;
+    padding: 1rem;
+    border-radius: 8px;
+    @include flexbox(center, space-between, null, 2rem);
+  }
+  &__image {
+    img {
+      max-width: 160px;
+      border-radius: 4px;
+    }
+  }
+  &__content {
+    @include flexbox(flex-start, null, column, .75rem);
+
+
+    color: $white;
+  }
+}
+
+@media only screen and (max-width: 53.125rem) {
+  .blog {
+    &__wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: 26.875rem) {
+  .blog {
+    &__box {
+      @include flexbox(null, null, column, null);
+    }
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+
+.pages {
+  background-color: $header-bg-color;
+  @include flexbox(center, center, null, 2.5rem);
+  padding: 2rem;
+  svg {
+    @include flexbox(center, center, null, null);
+  }
+  .page__buttons {
+    &__wrapper {
+      @include flexbox(center, center, null, null);
+    }
+  }
+  button {
+    @include flexbox(center, center, null, null);
+  }
+  &__mobile__buttons {
+    display: none;
+    align-items: center;
+    gap: 16px;
+    flex-direction: column;
+    button {
+      width: 88%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 31.25rem) {
+  .pages {
+    display: none;
+    &__mobile__buttons {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+
+.magazine {
+  margin-top: 30px;
+  font-size: 12px;
+  &__wrapper {
+    background-color: $header-bg-color;
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+  &__header {
+    h3 {
+      color: $white;
+      margin: 0.5rem 0;
+    }
+    border-bottom: 1px solid #999696;
+  }
+  &__content {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  &__col:first-child {
+    @include flexbox(flex-start, space-between, column, 1.25rem);
+    flex-wrap: wrap;
+  }
+  &__col:last-child {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  &__row {
+    @include flexbox(center, null, null, 1rem);
+    &__image {
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    display: flex;
+  }
+  &__link {
+    h2 {
+      color: $secondary-blue;
+    }
+    p {
+      color: $white;
+    }
+  }
+}
+
+@media only screen and (max-width: 62.5rem) {
+  .magazine {
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__col:first-child {
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 36.25rem) {
+    .magazine {
+        &__row {
+          @include flexbox(flex-start, null, column, null);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+
+.hero {
+  &__right__ads {
+    @include flexbox(null, null, column, 1rem);
+    &__header {
+      background-color: $header-bg-color;
+      @include flexbox(null, null, column, 2rem);
+      padding: 1rem;
+      &__text {
+        color: $white;
+        font-size: 1.2rem;
+      }
+      &__form {
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          h3 {
+            color: $white;
+            font-size: 13px;
+          }
+        }
+        @include flexbox(center, space-between, null, null);
+        button {
+          @include flexbox(center, null, null, 0.25rem);
+          padding: 0.75rem;
+          svg {
+            @include flexbox(center, center, null, null);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 31.25rem) {
+  .hero {
+    &__right__ads {
+      &__header {
+        display: none;
+      }
+    }
+  }
+}

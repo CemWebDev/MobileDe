@@ -1,0 +1,89 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+
+.hero__left__filter {
+  height: 2600px;
+  background-color: $header-bg-color;
+  &__wrapper {
+    padding: 1rem;
+    font-size: 14px;
+  }
+  &__header {
+    h1 {
+      font-size: 14px;
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+  .first-modal,
+  .second-modal {
+    @include flexbox(center, space-between, null, null);
+    > div:first-child {
+      @include flexbox(flex-start, null, column, 0.25rem);
+      color: $white;
+    }
+    > div:last-child {
+      cursor: pointer;
+      color: $primary-color;
+      text-decoration: underline;
+      &:hover {
+        color: rgb(237, 130, 64);
+      }
+    }
+  }
+  .online-shop {
+    @include flexbox(flex-start, null, column, 1rem);
+    &__header {
+      form {
+        @include flexbox(center, null, null, 0.5rem);
+        color: $white;
+      }
+    }
+    &__conditions {
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 12px;
+      background-color: $primary-blue;
+      @include flexbox(null, null, column, 1rem);
+      color: $secondary-blue;
+      &__header {
+        h3 {
+          font-size: 12px;
+        }
+      }
+      &__link {
+        a {
+          text-decoration: underline;
+          color: $secondary-blue;
+          &:hover {
+            color: rgb(104, 144, 149);
+          }
+        }
+      }
+    }
+  }
+  &__form__tabs {
+    &__header {
+      @include flexbox(center, null, null, .25rem);
+      > button {
+        box-shadow: none !important;
+        flex: 1;
+        border-radius: 0 !important;
+        border-bottom: 1px solid $white;
+        padding: 0.5rem !important;
+        color: $white;
+        &:hover {
+          border-bottom-color: $primary-color;
+          color: $primary-color;
+        }
+      }
+    }
+    .first-tab,
+    .second-tab {
+      margin-top: 1rem;
+      display: none;
+    }
+  }
+}
+

@@ -1,0 +1,95 @@
+.hero-container {
+  .container {
+    .hero-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .hero-select-container {
+        display: flex;
+        gap: 20px;
+
+        .main-category-selector {
+          display: none;
+
+          &:checked ~ .hero-left label[for^="selection-1"] svg {
+            fill: #ff0000; // Seçili durumun stili
+          }
+        }
+
+        .hero-left {
+          display: flex;
+          align-items: center;
+
+          label {
+            cursor: pointer;
+
+            svg {
+              width: 40px;
+              height: 20px;
+              // SVG stilleri
+            }
+          }
+        }
+      }
+
+      .hero-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .hb-item {
+          margin-bottom: 15px;
+
+          // Etiketler için stiller
+          label {
+            // Etiket stilleri
+          }
+
+          // Seçim kutuları için stiller
+          select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            // Diğer seçim kutusu stilleri
+          }
+        }
+
+        .method-select-container {
+          display: flex;
+          gap: 10px;
+
+          button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            // Diğer buton stilleri
+          }
+        }
+
+        #more-filter {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .hb-item {
+            // Daha fazla filtreleme seçeneği için stiller
+          }
+        }
+
+        #submit-btn {
+          padding: 10px 20px;
+          background-color: #28a745;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          // Diğer arama butonu stilleri
+        }
+      }
+    }
+  }
+}

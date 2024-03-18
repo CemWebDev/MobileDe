@@ -1,0 +1,56 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+
+.banner {
+  margin-top: 5rem;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  &__box {
+    @include flexbox(center, space-between, null, 1.5rem);
+    background-color: $header-bg-color;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  &__image {
+    img {
+      max-width: 150px;
+      border-radius: 2.5px;
+    }
+  }
+  &__content {
+    @include flexbox(flex-start, null, column, 0.5rem);
+    color: $white;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 45rem) {
+  .banner {
+    padding: 1rem;
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 29.6875rem) {
+  .banner {
+    &__box {
+      @include flexbox(null, null, column, null);
+    }
+    &__image {
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    &__content {
+      @include flexbox(center, null, null, null);
+    }
+  }
+}

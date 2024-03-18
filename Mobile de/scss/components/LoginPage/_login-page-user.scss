@@ -1,0 +1,112 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+/* Use color variables */
+
+.form__section {
+  &__user {
+    max-width: 480px;
+    width: 100%;
+    background-color: rgb(30, 31, 36);
+    color: #fff;
+    font-size: 13px;
+    padding: 2rem;
+    border-radius: 4px;
+    @include flexbox(null, null, column, 2rem);
+    box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 1);
+    &__header {
+      width: 100%;
+      @include flexbox(center, space-between, null, .25rem);
+      > button {
+        flex: 1;
+        color: #ddd;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+        &:hover {
+          color: rgb(224, 75, 0);
+          border-bottom-color: rgb(224, 75, 0);
+          box-shadow: none !important
+        }
+      }
+    }
+    &__text__content {
+      > a {
+        @include flexbox(center, null, null, .25rem);
+        color: rgb(224, 75, 0);
+        text-decoration: underline;
+        &:hover {
+          color: rgb(224, 113, 82);
+        }
+      }
+      .confirmation {
+        max-width: 100%;
+        width: 100%;
+        display: none;
+        > form {
+          @include flexbox(center, center, null, null);
+        }
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid #dddd;
+        padding: 12px;
+        border-radius: 4px;
+      }
+    }
+    &__media__buttons {
+        @include flexbox(null, center, column, 1rem);
+      > button {
+        border: 1px solid #ddd;
+        padding: 0.75rem 0;
+        @include flexbox(center, center, null, 6px);
+        /* $secondary-blue */
+        color: rgb(135, 219, 230);
+        > div:first-child {
+          @include flexbox(center, center, null, null);
+        }
+        &:hover {
+          box-shadow: 0 2px 8px rgba($color: #ddd, $alpha: 1);
+        }
+      }
+    }
+    &__inputs {
+      form {
+        @include flexbox(flex-start, null, column, 1rem);
+        > div {
+          width: 100%;
+        }
+        > .input-wrapper {
+            @include flexbox(null, null, column, .25rem);
+        }
+        a.forgot-password {
+          color: #fff;
+          text-decoration: underline;
+        }
+        button.login-button {
+          width: 100%;
+        }
+      }
+    }
+    &__signup {
+      width: 100%;
+      button.sign-up-email-button {
+        width: 100%;
+        @include flexbox(center, center, null, 4px);
+        color: #fff;
+        > div:first-child {
+          @include flexbox(center, center, null, null);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 32.5rem) {
+  .form__section {
+    &__user {
+      max-width: 450px;
+      font-size: 11.9px;
+    }
+  }
+}

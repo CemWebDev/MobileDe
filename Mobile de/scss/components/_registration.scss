@@ -1,0 +1,102 @@
+/* @import "../utils/mixins";
+@import "../colors/colors";
+
+.form {
+  &__wrapper {
+    max-width: 450px;
+    width: 100%;
+    background-color: $header-bg-color;
+    border-radius: 4px;
+    @include flexbox(center, null, column, 2rem);    
+    &__header__buttons {
+      width: 100%;
+      @include flexbox(center, center, null, null);
+      button {
+        padding: 1rem;
+        background-color: $header-bg-color;
+        color: $primary-color;
+        border-bottom: 1px solid;
+        width: 100%;
+        font: {
+          size: 1rem;
+          weight: 550;
+        }
+      }
+    }
+    &__content {
+      @include flexbox(null, null, column, 2.5rem);
+      padding: 1rem;
+    }
+    &__header {
+      h3 {
+        color: $white;
+      }
+    }
+    &__text {
+      color: $white;
+      font-size: 13px;
+      a {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+    &__media__buttons {
+      @include flexbox(null, null, column, 1rem);
+      width: 100%;
+      button {
+        padding: 0.75rem;
+        @include flexbox(center, center, null, 6px);
+        border: 0.5px solid #cbcbcb;
+        color: $secondary-blue;
+        &:hover {
+          box-shadow: 0 2px 6px #cbcbcb;
+        }
+      }
+    }
+    .separator {
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+    }
+    form {
+      @include flexbox(null, null, column, 0.75rem);
+      > div:first-child,
+      div:nth-child(2) {
+        @include flexbox(null, null, column, 4px);
+        position: relative;
+        > label {
+          font-size: 0.75rem;
+          color: $white;
+        }
+        > input {
+          background: transparent;
+          border: 1px solid #cbcbcb;
+          //! Edit later
+          border-radius: 4px;
+          line-height: 30px;
+          padding: .4rem;
+          color: $white;
+          position: relative;
+          &:hover {
+            box-shadow: 0 2px 6px #cbcbcb; 
+          }
+          &:focus {
+            box-shadow: 0 4px 10px $secondary-blue;
+          }
+        }
+      }
+      .forgot-password {
+        color: $white;
+        text-decoration: underline;
+        font-size: .75rem;
+      }
+      .login-button {
+        background-color: $primary-color;
+        color: $white;
+        padding: .5rem 0;
+      }
+    }
+  }
+}
+
+ */

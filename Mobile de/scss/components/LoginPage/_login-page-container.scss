@@ -1,0 +1,18 @@
+@import "../../utils/mixins";
+
+.form__section {
+  margin-top: 4rem;
+  &__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 55.625rem) {
+  .form__section {
+    &__container {
+      @include flexbox(center, center, column-reverse, 3rem);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../colors/colors";
+@import "../../utils/mixins";
+
+.modals {
+  &__wrapper {
+    @include flexbox(null, null, column, 0.75rem);
+    font-size: 14px;
+  }
+  .modal-container {
+    @include flexbox(center, space-between, null, null);
+    > div:first-child {
+      color: $white;
+    }
+    .open-modal-link {
+      text-decoration: underline;
+      color: $primary-color;
+      cursor: pointer;
+      &:hover {
+        color: rgb(237, 130, 64);
+      }
+    }
+  }
+}

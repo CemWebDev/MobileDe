@@ -1,0 +1,7 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+
+.ads__container {
+    display: flex;
+    flex-direction: column;
+}

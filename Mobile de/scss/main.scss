@@ -1,0 +1,75 @@
+//! Reset css
+@use "./reset/reset";
+//! Reset css
+
+//! Global css
+@use "./global/global";
+//! Global css
+
+
+//! Layout
+
+@use "./layout/header";
+@use "./layout/footer";
+
+//! Components
+//* Home page main components
+@use "./components/banner";
+@use "./components/magazine";
+@use "./components/_blog";
+@use "./components/ads";
+@use "./components/brands";
+//* Home page main components
+
+//* Header Components
+@use "./components/dropdown";
+//* Header Components
+
+//* Login Page Components
+@use "./components/LoginPage/login-page-container";
+@use "./components/LoginPage/login-page-user";
+@use "./components/LoginPage/login-page-info";
+@use "./components/LoginPage/login-page-footer";
+@use "./components/LoginPage/login-page-register-form";
+//* Login Page Components
+
+//* Advertisement Page Components
+@use "./components/AdsPage//breadcrumbs";
+@use "./components/AdsPage//ads-utils";
+@use "./components//AdsPage//hero";
+@use "./components/AdsPage/hero-right";
+@use "./components//AdsPage/ads-container";
+@use "./components/AdsPage/ads-box";
+@use "./components/AdsPage/ads-modal";
+@use "./components/AdsPage/pages";
+@use "./components/AdsPage/hero-left";
+@use "./components/AdsPage/filter-modals";
+@use "./components/AdsPage/filter-modal";
+@use "./components/AdsPage/filter-colors";
+@use "./components//AdsPage/quality";
+@use "./components/AdsPage/checkbox-form";
+@use "./components/AdsPage/ads-footer";
+@use "./components/AdsPage/ads-mobile-header";
+//* Advertisement Page Components
+
+//* External Filter Page Components
+@use "./components/ExternalFilter/filter-utils";
+@use "./components/ExternalFilter/section-form";
+@use "./components/ExternalFilter/forms";
+@use "./components/ExternalFilter/first-form";
+//* External Filter Page Components
+
+
+
+//! Components
+//! Pages
+@use "./pages/ForgotPassword";
+@use "./components/utils-dropdown";
+//! Tabs section files beginning
+
+@use "./components/tabs";
+//! Tabs section files ending
+
+
+
+

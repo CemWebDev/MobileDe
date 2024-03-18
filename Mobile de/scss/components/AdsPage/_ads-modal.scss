@@ -1,0 +1,73 @@
+@import "../../utils/mixins";
+@import "../../colors/colors";
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  @include flexbox(center, center, null, null);
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+  }
+  &__wrapper {
+    @include flexbox(center, center, column, 2rem);
+    width: 100%;
+    padding: 2rem 1rem;
+    max-width: 350px;
+    z-index: 5;
+    position: fixed;
+    background-color: $header-bg-color;
+    .close-modal {
+      position: absolute;
+      top: 0.5rem;
+      color: $white;
+      cursor: pointer;
+      right: 0.75rem;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__header {
+    @include flexbox(center, center, column, null);
+    text-align: center;
+    h3 {
+      color: $white;
+      font-size: 1rem;
+    }
+    p {
+      color: #ddd;
+      font-size: 12px;
+    }
+  }
+  &__image {
+    img {
+      max-width: 300px;
+    }
+  }
+  &__form {
+    form {
+      @include flexbox(null, null, column, 0.75rem);
+      > div {
+        label {
+          font-size: 12px;
+          color: $white;
+        }
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

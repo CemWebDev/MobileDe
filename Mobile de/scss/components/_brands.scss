@@ -1,0 +1,47 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+
+.brands {
+  margin: 30px 0;
+  color: $white;
+  &__wrapper {
+    background-color: $header-bg-color;
+    padding: 1rem;
+  }
+  &__list__wrapper {
+    @include flexbox(flex-start, null, null, 4.5rem);
+    flex-wrap: wrap;
+  }
+  &__list {
+    @include flexbox(flex-start, null, column, .375rem);
+  }
+  &__list__item {
+    &:first-child {
+      font: {
+        weight: 600;
+        size: 1.2rem;
+      }
+    }
+  }
+  &__list__link {
+    position: relative;
+    color: $white;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      color: #ccc;
+      padding-bottom: 2px;
+      border-bottom-color: #ccc;
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .brands {
+    &__list__item {
+      font-size: 1rem;
+    }
+    &__list__link {
+      font-size: 15px;
+    }
+  }
+}

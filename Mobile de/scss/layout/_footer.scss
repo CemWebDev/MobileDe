@@ -1,0 +1,45 @@
+@import "../utils/mixins";
+@import "../colors/colors";
+
+.footer {
+  margin: 50px 0;
+  color: $white;
+  &__wrapper {
+    padding: 1.5rem;
+    @include flexbox(flex-start, space-between, null, 2rem);
+    flex-wrap: wrap;
+  }
+  &__form {
+    @include flexbox(null, space-between, column, null);
+    &__media__links {
+      @include flexbox(center, null, null, 4px);
+      a {
+        color: #ccc;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    &__selection {
+      @include flexbox(null, null, column, 1rem);
+    }
+  }
+  &__list {
+    @include flexbox(null, null, column, 0.5rem);
+    &__header {
+      font: {
+        weight: 600;
+        size: 1.2rem;
+      }
+    }
+    &__link {
+      font-size: 0.875rem;
+      color: #ccc;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+
