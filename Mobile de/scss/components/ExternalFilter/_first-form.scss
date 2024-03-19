@@ -141,5 +141,22 @@
         }
       }
     }
+    .tab-header {
+      margin-top: .5rem;
+      color: $white;
+      font-size: 14px;
+    }
+    .first-tab-content, .second-tab-content {
+      &:not(.first-tab-content) {
+        display: none;
+      }
+      flex-direction: column;
+      gap: 8px;
+      > .tab-input-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
   }
 }
