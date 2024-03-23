@@ -1,95 +1,122 @@
-.hero-container {
-  .container {
-    .hero-wrapper {
+@import "../colors/colors";
+.tabs {
+  margin-top: 4.5rem;
+  &__container {
+    position: relative;
+    input#tab-1,
+    input#tab-2,
+    input#tab-3,
+    input#tab-4 {
+      display: none;
+    }
+    input#tab-1:checked ~ .tabs__content > .tabs__content__inner > #first-tab-content {
       display: flex;
-      justify-content: space-between;
-
-      .hero-select-container {
-        display: flex;
-        gap: 20px;
-
-        .main-category-selector {
-          display: none;
-
-          &:checked ~ .hero-left label[for^="selection-1"] svg {
-            fill: #ff0000; // Seçili durumun stili
-          }
-        }
-
-        .hero-left {
+    }
+    input#tab-2:checked ~ .tabs__content > .tabs__content__inner > #second-tab-content {
+      display: block;
+    }
+    input#tab-3:checked ~ .tabs__content > .tabs__content__inner > #third-tab-content {
+      display: block;
+    }
+    input#tab-4:checked ~ .tabs__content > .tabs__content__inner > #fourth-tab-content {
+      display: block;
+    }
+    width: 100%;
+    height: 300px;
+    background-color: $header-bg-color;
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    gap: 1.25rem;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    label {
+      cursor: pointer;
+      opacity: 0.45;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    background-color: $header-bg-color;
+    &__inner {
+      #first-tab-content,
+      #second-tab-content,
+      #third-tab-content,
+      #fourth-tab-content {
+        display: none;
+        flex-direction: column;
+        .vehicle-content__wrapper {
           display: flex;
-          align-items: center;
-
-          label {
-            cursor: pointer;
-
-            svg {
-              width: 40px;
-              height: 20px;
-              // SVG stilleri
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 16px;
+          .tabs__row{
+            flex-wrap: wrap;
+            h3 {
+              font-size: 14px;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            .tabs__radios {
+              display: flex;
+              gap: .5rem;
+              div {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+              }
+            }
+            .external-filter-link {
+              a {
+                svg {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                display: flex;
+                color: $white;
+                align-items: center;
+                font-size: 14px;
+              }
             }
           }
         }
       }
-
-      .hero-right {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-        .hb-item {
-          margin-bottom: 15px;
-
-          // Etiketler için stiller
-          label {
-            // Etiket stilleri
-          }
-
-          // Seçim kutuları için stiller
-          select {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+      #fourth-tab-content {
+        .vehicle-content__wrapper {
+          gap: 2rem;
+          margin-top: 1.25rem;
+          .vehicle-wrapper {
+            
             width: 100%;
-            // Diğer seçim kutusu stilleri
+            display: flex;
+            justify-content: space-around;
+            div {
+              padding: 2.25rem;
+              cursor: pointer;
+              border-radius: 4px;
+              svg {
+                color: $primary-color;
+                display: flex;
+              }
+              &:hover {
+                background-color: $body-bg-color;
+                box-shadow: 0 4px 12px rgba($color: #000000, $alpha: .4);
+              }
+            }
           }
-        }
-
-        .method-select-container {
-          display: flex;
-          gap: 10px;
-
-          button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            // Diğer buton stilleri
-          }
-        }
-
-        #more-filter {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-
-          .hb-item {
-            // Daha fazla filtreleme seçeneği için stiller
-          }
-        }
-
-        #submit-btn {
-          padding: 10px 20px;
-          background-color: #28a745;
-          color: #fff;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          // Diğer arama butonu stilleri
         }
       }
     }
   }
 }
+
